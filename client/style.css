@@ -1,0 +1,36 @@
+.settings {
+    margin-bottom: 2em;
+}
+.settings label {
+    display: inline-block;
+    width: 15em;
+}
+.settings input {
+    width: 20em;
+}
+table {
+    border-collapse: collapse;
+}
+th, td {
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+.items th {
+    width: 15em;
+}
+.items th.actions {
+    width: 25em;
+}
+.items td {
+    padding: 5px;
+    box-sizing: border-box;
+}
+.items input {
+    width: 100%;
+    box-sizing: border-box;
+}
+.items button {
+    width: 30%;
+    box-sizing: border-box;
+}

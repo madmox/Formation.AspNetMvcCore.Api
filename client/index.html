@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste de tâches</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+</head>
+<body>
+    <h1>Liste de tâches</h1>
+    
+    <div class="settings">
+        <h2>Paramètres</h2>
+        <label for="apiBaseUrl">URL de base de l'API :</label>
+        <input id="apiBaseUrl" type="text" placeholder="http://local.todo-api.com/" data-bind="value: apiBaseUrl" />
+    </div>
+    
+    <div class="items">
+        <h2>Liste des éléments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Libellé</th>
+                    <th>Création</th>
+                    <th>Mise à jour</th>
+                    <th class="actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ko foreach: items -->
+                <tr>
+                    <td><input type="text" data-bind="value: label" /></td>
+                    <td data-bind="text: created"></td>
+                    <td data-bind="text: updated"></td>
+                    <td>
+                        <button data-bind="click: $root.update">Mettre à jour</button>
+                        <button data-bind="click: $root.copy">Copier</button>
+                        <button data-bind="click: $root.remove">Supprimer</button>
+                    </td>
+                </tr>
+                <!-- /ko -->
+                <tr>
+                    <td><input type="text" data-bind="value: newItemLabel" /></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>
+                        <button data-bind="click: add">Ajouter</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="todo.js"></script>
+</body>
+<html>
