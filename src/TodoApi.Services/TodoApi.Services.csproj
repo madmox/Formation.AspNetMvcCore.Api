@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TodoApi.DTO\TodoApi.DTO.csproj" />
+    <ProjectReference Include="..\TodoApi.Entities\TodoApi.Entities.csproj" />
+    <ProjectReference Include="..\TodoApi.Repositories\TodoApi.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>
